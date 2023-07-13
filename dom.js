@@ -1,7 +1,7 @@
 var bigPic = document.querySelector("#cup");
-var smallPics = document.querySelector(".small");
+var smallPics = document.querySelectorAll(".small");
 for (var i = 0; i < smallPics.length; i++) {
-    smallPics[i].addEventListner("click" , changePic);
+    smallPics[i].addEventListener("click" , changePic);
 }
 function changePic(){
     var newPic = this.src;
