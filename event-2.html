@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom event 객체</title>
+    <style>
+    #container{
+        width: 200px;
+        margin: 50px auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="images/pin-1.png" alt="소녀" id="cover">
+    </div>
+    <script>
+        var cover = document.getElementById("cover");
+        cover.addEventListener("mouseover" , changePic , false); //이벤트, 변수 이름, 캡처 여부 X 
+        cover.addEventListener("mouseout" , originPic , false); //flase = 캡처 여부 X 
+        function changePic(){
+            cover.src = "images/pin-2.jpg" 
+        }
+        function originPic(){
+            cover.src = "images/pin-1.png" 
+        }
+    </script>
+</body>
+</html>

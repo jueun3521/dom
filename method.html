@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메서드 가져오기</title>
+    <style>
+        .green{
+            color: green;
+            text-decoration: none;
+            border: 3px solid #988;
+            
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com">네이버</a>
+
+    <script>
+        var aEl = document.querySelector("a");
+        // console.log(aEl);
+        var href = aEl.getAttribute("href");
+        // console.log(href);
+        aEl.setAttribute("href" , "http://www.google.com") // 네이버 -> 구글로 주소 전환
+        // console.log(aEl)
+        aEl.innerText = "구글" //set에 다시 세팅을 하고 텍스트를 바꿈 (네이버 -> 구글로 텍스트도 전환)
+        aEl.setAttribute("target" , "_blank"); //새 창으로 띄우게 하기
+            // console.log(aEl.target) // = black
+        aEl.setAttribute("class" , "green"); //텍스트 컬러 바꿈
+            // console.log(aEl.className) // = green
+        aEl.setAttribute("data-d" , "google"); //데이터 = 속성 / d = 속성값 (d: 'google')  
+        // aEl.setAttribute("data-d" , "naver"); //데이터 = 속성 / d = 속성값 (d: 'naver') 
+        // console.log(aEl.dataset); //데이터 값을 알기 위해 dataset
+        aEl.removeAttribute("class") //green 값을 준 클래스 지워짐
+
+
+    </script>
+</body>
+</html>
